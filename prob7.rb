@@ -10,13 +10,25 @@ def create()
   puts "You are a writer, you create written pieces"
 end
 end
+
 class Painter
 def create()
  puts  "You are an artist, you create art pieces"
 end
 end
 
+def showcase_talent(artist)
+  artist.each do |artist|
+    artist.create
+  end
+end
+
+puts "Normal testing"
 picasso = Painter.new()
 mary_shelley = Writer.new()
 picasso.create()
 mary_shelley.create()
+
+puts""
+puts "Testing with array"
+showcase_talent([mary_shelley, picasso, mary_shelley, mary_shelley, picasso])
