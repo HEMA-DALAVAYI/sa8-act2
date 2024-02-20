@@ -17,6 +17,8 @@ class Quiz
   end
 end
 end
+
+puts ""
 quiz = Quiz.new
 quiz.question_about_math
 quiz.question_about_history
