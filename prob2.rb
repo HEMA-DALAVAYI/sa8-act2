@@ -10,14 +10,12 @@ class Gadget
     @name = name
     @price = price
   end
-  attr_reader  :name , :price
+  attr_reader  :name
   attr_writer  :price
 end
 
 gadget1 = Gadget.new('Iphone-14', 1000)
 puts gadget1.name
-puts "Before Change"
-puts gadget1.price
 puts "After Change"
 gadget1.price = 500
-puts gadget1.price
+puts gadget1.inspect
