@@ -10,12 +10,25 @@ class Camera
   def initialize(status)
     @status = status
   end
+
+  def turn_on
+    self.status = 'on'
+    puts "Camera is turned on."
+  end
+
+  def turn_off
+    self.status = 'off'
+    puts "Camera is  turned off."
+  end
+
   def condition
     puts "The camera is #{self.status}"
   end
 end
 
-camera = Camera.new('off')
+camera = Camera.new('on')
 puts camera.condition
-camera.status = 'onn'
+camera.turn_off
+puts camera.condition
+camera.turn_on
 puts camera.condition
